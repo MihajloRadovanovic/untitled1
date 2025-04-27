@@ -59,7 +59,7 @@ public class PetUserTests {
                 .header("Content-type", "application/json")
                 .body(body).
                 when()
-                         .post("user")
+                         .post(userEndpoint)
                          .then()
                          .statusCode(200)
                          .body("code", equalTo(200))
